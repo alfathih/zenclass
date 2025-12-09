@@ -1,0 +1,35 @@
+# RISHI TASK 1 SHELL IF ELSE
+cat sampl.sh 
+#!/bin/bash
+a=$1
+b=$2
+echo "$a and $b"
+c=$((a+b))
+echo "$c"
+if [[ 10 -gt $c ]] then
+	echo "c is greater"
+else
+	echo "10 is greater"
+fi
+	if [[ $a -gt $b ]] then 
+	       echo "A is greater"
+       elif [[ $b -gt $a ]] then 
+		echo "B is greater"
+	else 
+		echo "NO one is greater"
+ 	fi	
+#BASH
+bash -x ./sampl.sh 43 32
++ a=43
++ b=32
++ echo '43 and 32'
+43 and 32
++ c=75
++ echo 75
+75
++ [[ 10 -gt 75 ]]
++ echo '10 is greater'
+10 is greater
++ [[ 43 -gt 32 ]]
++ echo 'A is greater'
+A is greater
