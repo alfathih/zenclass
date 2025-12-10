@@ -1,0 +1,71 @@
+filters - 
+
+cat filename - to display the contents of the filename
+| --> is to send output of one command to another command
+; --> to sequentially run commds
+eg - date; echo "this is usage of ;"
+
+
+
+cat filename | grep "string"
+
+
+grep --> to search the line with the substring
+for eg - cat filename | grep "string"
+options - 
+-i --> case insensitive match
+-v --> to exclude the string
+
+:%s#searchstring#replacestring#g
+
+sed command - to search / filter / to replace
+
+wc - > word count command
+eg - wc -l --> to count the number of lines 
+sudo netstat -tulpn | grep -v "Active" | grep -v "Proto" | wc -l
+
+awk --> to filter based on a position of anything 
+eg - filter only 2 rows
+filter only second column
+eg - ps -aux | grep "ubuntu" | awk -F '.'  '{print $3}'
+
+
+find -- to find any item in ;inux 
+eg - to find a file / to find a directory / to find a link
+
+ sudo find /tmp -name "test"
+
+simple alternative - locate command (updatedb - run this before running locate command)
+
+
+
+-x --> to debug and see how the script is being executed step wise
+eg - bash -x myscript.sh
+
+
+
+Task - 
+
+1.create 2 variables (a and b)
+2. pass from the argument while executing the script -> while executing the script , we need to pass the values to those variables
+3.take the sum of the a and b and put it inside c variable
+4. create a if condition -> to check if output(c) is greater that 10  print greater than 10
+5. create a nested if condition to check if a is greater than b
+elif b greater than a
+print b is greater than a 
+
+Github - 
+
+1. Sign in / Sign up to github account
+2. create fork to https://github.com/alfathih/zenclass/tree/main
+3. create a branch from the fork
+4. upload the task screenshot or document 
+5. Click commit
+6. Create Pull request with the button on top
+
+
+
+
+
+
+
