@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  myapp:
+    image: 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/myapp:latest 
+    deploy:
+      mode: replicated
+      endpoint_mode: vip
+      replicas: 3
+      placement:
+        constraints:
+          - 'node.hostname == ip-172-31-74-126.ec2.internal '
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 50M
+        reservations:
+          cpus: '0.25'
+          memory: 20M
+    ports: ["8000:8000"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+  database:
+    image: postgres:14
+    ports: ["5432:5432"]
+    environment:
+      - POSTGRES_DB=myapp
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - pg_data:/var/lib/postgresql/data/
+volumes:
+  pg_data:

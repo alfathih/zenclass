@@ -1,0 +1,697 @@
+    1  clear
+    2  git --version
+    3  git clone https://gitlab.com/alfathih.11-group/alfathih.11-project.git
+    4  pwd
+    5  git clone https://github.com/alfathih/zenclass.git
+    6  ls
+    7  cd zenclass/
+    8  git checkout -b feature/myhomepage
+    9  ls
+   10  git push origin feature/myhomepage
+   11  cd ../
+   12  ls
+   13  git clone https://github.com/alfathih/test.git
+   14  ssh-keygen -t rsa -b 4096 -C "alfathih.11@gmail.com"
+   15  cat /root/.ssh/id_rsa.pub
+   16  ssh-add ~/.ssh/id_rsa
+   17  exit
+   18  clear
+   19  docker ps
+   20  ss -tulpn 
+   21  ss -tulpn | grep 80
+   22  docker ps
+   23  docker ps -a
+   24  docker rm 32b1dd5d3fae
+   25  docker ps -a
+   26  docker rm dbfa2b76b247 32b1dd5d3fae
+   27  docker ps -a
+   28  docker run --help
+   29  history 
+   30  docker
+   31  apt install docker
+   32  apt update
+   33  apt install docker
+   34  apt install continerd
+   35  apt install docker.io
+   36  docker
+   37  ps -aux | grep docker
+   38  docker ps
+   39  docker ps -a
+   40  docker image ls
+   41  docker image pull nginx
+   42  docker image ls
+   43  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 008041186848.dkr.ecr.us-east-1.amazonaws.com
+   44  aws
+   45  apt install awscli
+   46  apt install aws
+   47  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+   48  unzip awscliv2.zip
+   49  sudo ./aws/install
+   50  aws --version
+   51  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 008041186848.dkr.ecr.us-east-1.amazonaws.com
+   52  docker tag zenclass/apps:latest 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps:latest
+   53  docker image ls
+   54  docker image ls -a
+   55  docker image ls --help
+   56  docker image list
+   57  docker images
+   58  docker tag nginx:latest 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps:latest
+   59  docker images
+   60  docker push 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps:latest
+   61  docker images
+   62  docker image rm 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps
+   63  docker images
+   64  docker image rm nginx:latest
+   65  docker images
+   66  docker pull 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps:latest
+   67  docker images
+   68  docker run -i 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps
+   69  docker run --help
+   70  docker run 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps -d
+   71  docker run -d 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps 
+   72  history 
+   73  docker ps
+   74  docker exec cc7730dd8d02 -- ps
+   75  docker exec cc7730dd8d02  ps
+   76  which ps
+   77  docker exec cc7730dd8d02  curl
+   78  docker exec -it cc7730dd8d02 -- bash  
+   79  docker exec -it cc7730dd8d02  bash  
+   80  history 
+   81  docker exec cc7730dd8d02  curl http://localhost:80 
+   82  docker run --help | grep port
+   83  docker ps
+   84  docker rm cc7730dd8d02
+   85  docker stop cc7730dd8d02
+   86  docker rm cc7730dd8d02
+   87  docker run -d -p 8080:80  008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps 
+   88  docker ps
+   89  ss -tulpn 
+   90  curl http://localhost:8080
+   91  curl http://localhost:80
+   92  docker run -d -p 8081:80  008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps 
+   93  find / -name "index.html"
+   94  docker ps
+   95  docker exec -it 0a58e8520c5a bash
+   96  top
+   97  ps -aus | grep docker
+   98  ps -aux | grep docker
+   99  docker ps
+  100  docker ps -a
+  101  docker rm 0a58e8520c5a
+  102  docker rm docker rm 3209bdfb3fa1
+  103  docker rm  3209bdfb3fa1
+  104  docker rm 3209bdfb3fa1
+  105  clear
+  106  mkdir sample_nodejs
+  107  cd sample_nodejs/
+  108  vi package.json
+  109  vi index.js
+  110  vi index.html
+  111  npm install
+  112  npm start
+  113  npm run dev
+  114  ls
+  115  vi Dockerfile
+  116  docker build .
+  117  docker images
+  118  docker build -t myapp:v1 .
+  119  docker images
+  120  docker build -t myapp:v2 .
+  121  docker images
+  122  docker image rm myapp
+  123  docker image rm myapp:v1
+  124  docker image rm myapp:v2
+  125  clear
+  126  pm2 start
+  127  sudo npm install pm2@latest -g
+  128  pm2 start
+  129  pm2 start index.js 
+  130  pm2 stop 0
+  131  pm2 rm 0
+  132  pm2 delete  0
+  133  exit
+  134  clear
+  135  ls
+  136  cd sample_nodejs/
+  137  ls
+  138  mv Dockerfile /tmp
+  139  ls\
+  140  ls
+  141  rm -rf node_modules/
+  142  rm package-lock.json 
+  143  ls
+  144  cat package.json 
+  145  cat index.js 
+  146  npm intall .
+  147  npm intall 
+  148  npm install 
+  149  ls
+  150  npm run 
+  151  npm start
+  152  clear
+  153  rm -rf node_modules
+  154  rm -rf package-lock.json 
+  155  docker images
+  156  docker image rm 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/apps node:18-alpine
+  157  docker images
+  158  clear
+  159  vi Dockerfile
+  160  pwd
+  161  ls
+  162  vi Dockerfile
+  163  docker build -t zen_nodejs:v1.0
+  164  docker build -t zen_nodejs:v1.0 .
+  165  vi Dockerfile
+  166  docker build -t zen_nodejs:v1.0 .
+  167  docker images
+  168  vi Dockerfile 
+  169  docker build -t zen_nodejs:v1.0 .
+  170  docker images
+  171  vi Dockerfile 
+  172  docker build -t zen_nodejs:v1.0 .
+  173  docker images
+  174  vi Dockerfile 
+  175  docker images
+  176  docker build -t zen_nodejs:v1.0 .
+  177  docker images
+  178  vi Dockerfile 
+  179  docker build -t zen_nodejs:v1.0 .
+  180  docker images
+  181  docker run zen_nodejs:v1.0
+  182  docker ps -a
+  183  vi Dockerfile 
+  184  docker build -t zen_nodejs:v1.0 .
+  185  docker run zen_nodejs:v1.0
+  186  docker ps
+  187  docker ps -a
+  188  vi Dockerfile 
+  189  cd ..
+  190  cd zenclass/
+  191  ls
+  192  git branch
+  193  git checkout main
+  194  git pull
+  195  mkdir nodejs_sample
+  196  cp ../sample_nodejs/package.json nodejs_sample/
+  197  cp ../sample_nodejs/index.js nodejs_sample/
+  198  cp ../sample_nodejs/index.html nodejs_sample/
+  199  git add .
+  200  git commit -am "adding sample nodejs code"
+  201  git push origin main
+  202  ls /home/ubuntu/.ssh/
+  203  exit
+  204  history 
+  205  cd ../sample_nodejs/
+  206  cat Dockerfile 
+  207  cat index.js 
+  208  vi index.js 
+  209  grep 3000 *
+  210  npm niall
+  211  npm install
+  212  npm start
+  213  history | grep pm2
+  214  pm2 ls
+  215  pm2 atart
+  216  pm2 start
+  217  pm2 start index.js 
+  218  pm2 restart 0
+  219  pm2 ls
+  220  pm2 logs 0
+  221  pm2 stop 0
+  222  pm2 rm 0
+  223  pm2 delete 0
+  224  ls
+  225  printenv
+  226  vi Dockerfile 
+  227  rm -rf node_modules
+  228  rm package-lock.json 
+  229  ls
+  230  docker build -t zen_nodejs:v2.1 .
+  231  npm install
+  232  docker build -t zen_nodejs:v2.1 .
+  233  docker run zen_nodejs:v2.1
+  234  docker run -d zen_nodejs:v2.1
+  235  docker ps
+  236  docker exec -it f479f3db1849 sh
+  237  docker run --help
+  238  vi Dockerfile 
+  239  docker build -t zen_nodejs:v2.1 .
+  240  docker run -d zen_nodejs:v2.1
+  241  docker ps
+  242  docker stop f479f3db1849
+  243  docker rm f479f3db1849
+  244  docker ps
+  245  docker run -d zen_nodejs:v2.1
+  246  docker ps
+  247  docker ps -a
+  248  docker run -d zen_nodejs:v2.1 npm start
+  249  docker ps -a
+  250  docker ps 
+  251  vi Dockerfile 
+  252  docker build -t zen_nodejs:v2.1 .
+  253  docker run -d zen_nodejs:v2.1
+  254  docker ps
+  255  docker ps -a
+  256  docker stop d7e9014684bd
+  257  docker ps -a
+  258  docker ps
+  259  docker run -d zen_nodejs:v2.1 1000
+  260  docker ps
+  261  docker ps -a
+  262  docker run -d zen_nodejs:v2.1 sleep 1000
+  263  docker ps -a
+  264  vi Dockerfile 
+  265  mv Dockerfile myfile
+  266  docker build -t zen_nodejs:v2.1 .
+  267  docker build -f myfile -t zen_nodejs:v2.1 .
+  268  docker-compose
+  269  apt udate 
+  270  apt update 
+  271  apt install docker-compose
+  272  docker-compose 
+  273  vi vi docker-compose.yml
+  274  vi docker-compose.yml
+  275  docker images
+  276  vi docker-compose.yml
+  277  vi myfile 
+  278  rm -rm node_modules/
+  279  rm -rf node_modules/
+  280  rm -rf package-lock.json 
+  281  ls
+  282  docker build -f myfile -t zen_nodejs:v2.1 .
+  283  docker images
+  284  docker-compose up
+  285  docker-compose up -d
+  286  docker ps
+  287  vi docker-compose.yml 
+  288  docker ps
+  289  docker stop 44cbaaedd13a
+  290  docker rm 44cbaaedd13a
+  291  docker ps
+  292  docker images
+  293  docker-compose up -d
+  294  mv myfile Dockerfile
+  295  docker-compose up -d
+  296  docker ps
+  297  docker image
+  298  docker images
+  299  vi docker-compose.yml 
+  300  docker-compose logs
+  301  docker ps
+  302  docker logs
+  303  docker logs a49d377e91ff
+  304  docker inspect a49d377e91ff
+  305  cat docker-compose.yml 
+  306  exit
+  307  ss -tulpn | grep 3000
+  308  curl http://localhost:3000
+  309  docker ps
+  310  docker exec -it 7579eec3dfb0 bash
+  311  docker exec -it 7579eec3dfb0 sh
+  312  ss -tulpn | grep 8000
+  313  curl http://localhost:3000
+  314  curl http://localhost:8000
+  315  curl http://localhost:3000
+  316  curl http://localhost:800
+  317  curl http://localhost:8000
+  318  curl http://localhost:8080
+  319  curl http://localhost:8080/users
+  320  curl http://localhost:8080/GET/users
+  321  docker ps
+  322  docker ps -a
+  323  ls
+  324  cd  sample_nodejs/
+  325  ls
+  326  cat docker-compose.yml 
+  327  docker-compose up
+  328  docker-compose up -d
+  329  docker ps
+  330  docker inspect a49d377e91ff
+  331  docker network ls
+  332  vi docker-compose.yml 
+  333  docker-compose up -d
+  334  vi docker-compose.yml 
+  335  docker-compose up -d
+  336  docker ps
+  337  docker ps -a
+  338  vi docker-compose.yml 
+  339  docker-compose up -d
+  340  docker volume
+  341  docker volume s
+  342  docker volume ls
+  343  docker volume rm sample_nodejs_db-data
+  344  docker rm 49d97bd91c15bce67fafd2f7bfb148a3cd1f082821586fea119bd128476c4f1d
+  345  docker volume rm sample_nodejs_db-data
+  346  docker ps
+  347  cat docker-compose.yml 
+  348  docker ps -a
+  349  docker-compose up -d
+  350  docker ps
+  351  vi docker-compose.yml 
+  352  docker-compose --help
+  353  docker-compose restart -d
+  354  docker-compose restart 
+  355  docker ps
+  356  docker-compose down 
+  357  docker-compose up -d
+  358  docker ps
+  359  docker inspect 5616155fc4fa
+  360  ip a
+  361  docker run --name nginx --network host nginx
+  362  docker run --name nginx --network host -d nginx 
+  363  docker run --name nginx1 --network host -d nginx 
+  364  docker ps
+  365  docker inspect 9b3a43988f10
+  366  ip a
+  367  cat docker-compose.yml 
+  368  docker ps
+  369  docker exec -it 6954caff909b ping 5616155fc4fa
+  370  docker exec -it sample_nodejs_myapp_1 ping sample_nodejs_database_1
+  371  docker exec -it 6954caff909b ping google.com
+  372  docker inspect 9b3a43988f10
+  373  docker ps
+  374  docker stop sample_nodejs_database_1
+  375  docker ps
+  376  docker start sample_nodejs_database_1
+  377  docker stop sample_nodejs_database_1
+  378  docker rm sample_nodejs_database_1
+  379  docker-compose up -d
+  380  docker network ls
+  381  docker volume ls
+  382  docker stop nginx1
+  383  docker volume ls
+  384  docker rm nginx1
+  385  docker volume ls
+  386  docker ps -a
+  387  docker volume --help
+  388  docker network
+  389  docker network ls
+  390  docker network create myipvlan -d ipvlan
+  391  docker network ls
+  392  docker ps
+  393  docker network connect sample_nodejs_myapp_1 myipvlan
+  394  docker network connect myipvlan sample_nodejs_myapp_1 
+  395  docker inspect sample_nodejs_myapp_1
+  396  docker volume ls
+  397  clear
+  398  docker volume --help
+  399  docker volume create --help
+  400  docker volume create pg_data
+  401  docker volume ls
+  402  vi docker-compose.yml 
+  403  docker ps 
+  404  docker exec -it sample_nodejs_database_1 bash
+  405  vi docker-compose.yml 
+  406  docker-compose down 
+  407  docker-compose up -d
+  408  docker ps
+  409  docker inspect sample_nodejs_database_1
+  410  :q
+  411  ls /var/lib/docker/volumes/pg_data/_data
+  412  docker-compose down 
+  413  docker ps -a
+  414  ls /var/lib/docker/volumes/pg_data/_data
+  415  ls /var/lib/docker/volumes/pg_data/_data/data/
+  416  docker volume ls
+  417  docker-compose up -d
+  418  docker inspect sample_nodejs_database_1
+  419  vi docker-compose.yml 
+  420  docker-compose down 
+  421  docker-compose up -d
+  422  docker-compose down 
+  423  docker volume ls
+  424  ls /var/lib/docker/volumes/pg_data/_data/data/
+  425  ls /var/lib/docker/volumes/
+  426  ls /var/lib/docker/volumes/sample_nodejs_pg_data/
+  427  ls /var/lib/docker/volumes/sample_nodejs_pg_data/_data/
+  428  docker-compose down 
+  429  docker ps
+  430  docker-compose up -d
+  431  ls /var/lib/docker/volumes/sample_nodejs_pg_data/_data/
+  432  docker ps
+  433  docker stop  sample_nodejs_database_1
+  434  docker rm sample_nodejs_database_1
+  435  docker ps
+  436  docker-compose up -d
+  437  cat docker-compose.yml 
+  438  ps -aux | grep docker
+  439  systemctl status docker
+  440  cat /usr/lib/systemd/system/docker.service
+  441  ls /etc/docker/
+  442  ls /var/lib/docker/
+  443  docker logs 
+  444  docker ps
+  445  doker logs eeb4d91bed0f
+  446  docker logs eeb4d91bed0f
+  447  ls /var/lib/docker/containers/
+  448  ls /var/lib/docker/containers/041004df0d199f56d3c961311bdb18c5996b48f00c3fd4522bcce868b4f1911f
+  449  ls /var/lib/docker/containers/041004df0d199f56d3c961311bdb18c5996b48f00c3fd4522bcce868b4f1911f/041004df0d199f56d3c961311bdb18c5996b48f00c3fd4522bcce868b4f1911f-json.log
+  450  less /var/lib/docker/containers/041004df0d199f56d3c961311bdb18c5996b48f00c3fd4522bcce868b4f1911f/041004df0d199f56d3c961311bdb18c5996b48f00c3fd4522bcce868b4f1911f-json.log
+  451  docker inspect sample_nodejs_database_1
+  452  less /var/lib/docker/containers/eeb4d91bed0fcbb8188a07beb93c4012fe686137e1f85d9dcc27658e8f23d57e/eeb4d91bed0fcbb8188a07beb93c4012fe686137e1f85d9dcc27658e8f23d57e-json.log
+  453  vi docker-compose.yml 
+  454  docker-compose down 
+  455  docker-compose up -d
+  456  vi docker-compose.yml 
+  457  docker-compose up -d
+  458  docker-compose down 
+  459  docker-compose up -d
+  460  docker ps
+  461  cat docker-compose.yml 
+  462  docker-compose --help
+  463  docker-compose scale --help
+  464  docker-compose up -d --scale database=3
+  465  docker-compose up -d --scale myapp=5
+  466  docker ps
+  467  cat docker-compose.yml 
+  468  clear
+  469  docker service ls
+  470  cd sample_nodejs/
+  471  vi docker-compose.yml 
+  472  docker-compose --help
+  473  docker-compose config --help
+  474  docker-compose config ls
+  475  docker-compose config 
+  476  ls
+  477  df -hT
+  478  docker images
+  479  docker image rm 3dffa73a22c8 34089ae11d19 1fb0a65c3157 d3c4dc92bb3e c4a32d5abfd7 8ed59667620f b2dcb9f5c804 65b80c4b801f 4af177a024eb e7b39c54cdec ee77c6cd7c18
+  480  docker images
+  481  docker ps
+  482  docker ps -a
+  483  docker rm 4f6e37255261 619de3f840ff 9e81f3ec0967 a5631f320b9f 65ce7ce25ca1 2650ed831f07 d41d0df3eb61 0fadfe55abbb c3974c792bdd c0393e643cfe d7e9014684bd 148955a62708 70576eb4e039 21b9c35ef9e6 f159f0cc64c8 7579eec3dfb0 041004df0d19
+  484  docker image rm 3dffa73a22c8 34089ae11d19 1fb0a65c3157 d3c4dc92bb3e c4a32d5abfd7 8ed59667620f b2dcb9f5c804 65b80c4b801f 4af177a024eb e7b39c54cdec ee77c6cd7c18
+  485  df -h
+  486  clear
+  487  vi docker-compose.yml 
+  488  vi Dockerfile 
+  489  cat index.js 
+  490  vi Dockerfile 
+  491  vi docker-compose.yml 
+  492  ss -tulpn | grep 80
+  493  docker-compose up -d 
+  494  vi index.js 
+  495  ss -tulpn | grep 80
+  496  vi docker-compose.yml 
+  497  docker network ls
+  498  vi index.js 
+  499  vi docker-compose.yml 
+  500  docker-compose up -d 
+  501  docker-compose down 
+  502  docker-compose up -d 
+  503  vi docker-compose.yml 
+  504  docker-compose down 
+  505  docker-compose up -d 
+  506  docker-compose ls
+  507  docker ps
+  508  curl http://localhost:80
+  509  ss -tulpn | grep 80
+  510  lcpu
+  511  top
+  512  free -h
+  513  vi docker-compose.yml 
+  514  docker-compose down 
+  515  docker-compose up -d 
+  516  top
+  517  docker ps
+  518  ss -tulpn | grep 80
+  519  docker stop 88ac44904ab7
+  520  docker ps
+  521  docker rm 88ac44904ab7
+  522  docker ps
+  523  clear
+  524  docker-compose down 
+  525  docker ps
+  526  docker ps -a
+  527  docker swarm --help
+  528  docker swarm init --help
+  529  docker swarm init --advertise-addr 172.31.27.158
+  530  clear
+  531  docker node ls
+  532  ss -tulpn
+  533  docker node ls
+  534  docker node --help
+  535  docker node ls
+  536  docker node promote ip-172-31-74-126.ec2.internal
+  537  docker node ls
+  538  docker node demote ip-172-31-74-126.ec2.internal
+  539  docker node ls
+  540  clear
+  541  ls
+  542  docker service ls
+  543  docker service --help
+  544  docker service create myapp --help
+  545  docker service create --help
+  546  docker service create --name myapp nginx:latest --replicas 3 -p 80:80
+  547  docker service create --name myapp nginx:latest --replicas 3
+  548  docker service ls
+  549  docker service create nginx:latest --replicas 3
+  550  docker service ls
+  551  docker service --help
+  552  docker service rm determined_fermi
+  553  docker service rm determined_fermi infallible_kalam
+  554  docker service rm determined_fermi infallible_kalam myapp
+  555  cat Dockerfile 
+  556  docker service create node:18-alpine --replicas 3
+  557  docker service ls
+  558  docker service ps od2o2my2zx17dndjkpl3nfaem
+  559  docker service ls
+  560  docker service logs affectionate_lederberg.1
+  561  docker service ls
+  562  docker service logs affectionate_lederberg
+  563  docker service rm affectionate_lederberg
+  564  docker service create node:18-alpine --replicas=3
+  565  ls /var/lib/docker/containers/041004df0d199f56d3c961311bdb18c5996b48f00c3fd4522bcce868b4f1911f/041004df0d199f56d3c961311bdb18c5996b48f00c3fd4522bcce868b4f1911f-json.log
+  566  docker service ls
+  567  docker service logs confident_hellman
+  568  docker service rm confident_hellman
+  569  docker service create --name=myapp --replicas=3 node:18-alpine
+  570  docker service ls
+  571  docker service logs myapp
+  572  docker service ls
+  573  docker service rm myapp
+  574  docker service create --name=myapp --replicas=3 nginx:latest
+  575  docker service ls
+  576  docker service logs myapp
+  577  docker ps
+  578  docker service ls
+  579  docker node ls
+  580  cat docker-compose.yml 
+  581  docker stack ls
+  582  docker stack --help
+  583  docker stack deploy --help
+  584  docker stack deploy --compose-file docker-compose.yml 
+  585  docker stack deploy --compose-file docker-compose.yml mystack
+  586  cat docker-compose.yml 
+  587  vi docker-compose.yml 
+  588  docker image ls
+  589  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 008041186848.dkr.ecr.us-east-1.amazonaws.com
+  590  docker build -t zenclass/myapp .
+  591  docker tag zenclass/myapp:latest 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/myapp:latest
+  592  docker push 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/myapp:latest
+  593  vi docker-compose.yml 
+  594  docker stack deploy --compose-file docker-compose.yml mystack
+  595  docker stack ls
+  596  docker service ls
+  597  curl http://localhost:8000
+  598  ss -tulpn | grep 8000
+  599  curl http://localhost:8000
+  600  docker ps
+  601  curl -I http://172.31.27.158:8000
+  602  docker stack deploy --help
+  603  vi docker-compose.yml 
+  604  docker stack --help
+  605  docker stack rm mystack
+  606  docker service ls
+  607  docker service rm myapp
+  608  docker service ls
+  609  docker stack deploy --compose-file docker-compose.yml mystack
+  610  docker service ls
+  611  docker ps
+  612  curl -I http://172.31.27.158:8000
+  613  curl http://172.31.27.158:8000
+  614  docker ps
+  615  docker stop 0bf2b61f3b0f
+  616  docker ps
+  617  vi docker-compose.yml 
+  618  docker stack rm mystack
+  619  docker stack deploy --compose-file docker-compose.yml mystack
+  620  docker ps
+  621  docker service ls
+  622  docker service logs mystack_myapp
+  623  docker service inspect mystack_myapp
+  624  docker node ls
+  625  vi docker-compose.yml 
+  626  docker stack rm mystack
+  627  docker stack deploy --compose-file docker-compose.yml mystack
+  628  docker service inspect mystack_myapp
+  629  docker service ls
+  630  docker service ps
+  631  docker stack ls
+  632  docker stack logs mystack
+  633  docker stack --help
+  634  docker stack ps
+  635  docker stack ps mystack
+  636  docker stack deploy --compose-file docker-compose.yml mystack --resolve-image always
+  637  docker stack ps mystack
+  638  docker stack rm mystack
+  639  docker stack deploy --compose-file docker-compose.yml mystack --resolve-image always
+  640  docker stack ps mystack
+  641  clear
+  642  cat docker-compose.yml 
+  643  docker node ls
+  644  vi docker-compose.yml 
+  645  docker stack rm mystack
+  646  clear
+  647  docker stack deploy --compose-file docker-compose.yml mystack --resolve-image always
+  648  docker ps
+  649  docker stack ps mystack
+  650  vi Dockerfile 
+  651  cleasr
+  652  clear
+  653  docker ps
+  654  cd sample_nodejs/
+  655  docker-compose down 
+  656  docker stack ps mystack
+  657  docker stackrm mystack
+  658  docker stack rm mystack
+  659  clear
+  660  docker stack deploy --compose-file docker-compose.yml --resolve-image always --with-registry-auth mystack
+  661  docker stack ps mystack
+  662  docker login
+  663  docker login localhost
+  664  clear
+  665  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 008041186848.dkr.ecr.us-east-1.amazonaws.com
+  666  clear
+  667  docker stack ps mystack
+  668  docker stack rm mystack
+  669  clear
+  670  docker stack deploy --compose-file docker-compose.yml --resolve-image always --with-registry-auth mystack
+  671  docker stack ps mystack
+  672  docker stack rm mystack
+  673  clear
+  674  cat docker-compose.yml 
+  675  docker images
+  676  docker image rm 0b367bbfc2d7 ad6c618e4f84 38258ceb9157 65b80c4b801f 4af177a024eb ee77c6cd7c18
+  677  clear
+  678  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 008041186848.dkr.ecr.us-east-1.amazonaws.com
+  679  docker stack deploy --compose-file docker-compose.yml --resolve-image always --with-registry-auth mystack
+  680  docker stack ps 
+  681  docker stack ps  mystack
+  682  vi Dockerfile 
+  683  docker image build .
+  684  docker run -d 6770ba6694ec
+  685  docker ps
+  686  docker exec -it hopeful_hertz sh
+  687  docker build -t zenclass/myapp .
+  688  docker tag zenclass/myapp:latest 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/myapp:latest
+  689  docker push 008041186848.dkr.ecr.us-east-1.amazonaws.com/zenclass/myapp:latest
+  690  docker stack --help
+  691  docker stack deploy --compose-file docker-compose.yml --resolve-image always --with-registry-auth mystack
+  692  cat docker-compose.yml 
+  693  cd ../zenclass/
+  694  git status
+  695  git pull
+  696  exit
+  697  history > history.log
