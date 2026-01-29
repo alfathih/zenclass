@@ -1,0 +1,176 @@
+    1  bash
+    2  cd C:\\Users
+    3  cd alfat
+    4  ls
+    5  cd Downloads/
+    6  ls
+    7  chmod 0700 demouser.pem 
+    8  ssh -i "C:\Users\alfat\Downloads\demouser.pem" demouser@44.201.91.246
+    9  cd C:\Users\alfat\OneDrive\Documents\DevOPs
+   10  cd C:\Users\alfat\OneDrive\Documents
+   11  ls
+   12  cd OneDrive/Documents/DevOPs/
+   13  ls
+   14  gh repo clone alfathih/zenclass
+   15  git clone https://github.com/alfathih/zenclass.git
+   16  ls
+   17  cd zenclass/
+   18  ls
+   19  mkdir tasks
+   20  cd tasks/
+   21  mkdir task1
+   22  mkdir task2
+   23  cd ../
+   24  git add .
+   25  git commit -am "added dir"
+   26  git config --global user.email "alfathih.11@gmail.com"
+   27  git config --global user.name "alfathih"
+   28  git commit -am "added dir"
+   29  git push origin main
+   30  git push origin main
+   31  cp ../../../../Downloads/task1.docx tasks/task1/
+   32  cp ../../../../Downloads/task1.docx tasks/task2/
+   33  git add .
+   34  git commit -m "hi"
+   35  git push origin main
+   36  telnet 
+   37  telnet database-1.cilwiwo2qrqq.us-east-1.rds.amazonaws.com 3306
+   38  git init
+   39  clear
+   40  bash
+   41  minikube
+   42  minikube start
+   43  docker
+   44  minikube start
+   45  docker-machine ls
+   46  # for ARM systems, set ARCH to: `arm64`, `armv6` or `armv7`
+   47  ARCH=amd64
+   48  PLATFORM=windows_$ARCH
+   49  curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.zip"
+   50  # (Optional) Verify checksum
+   51  curl -sL "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_checksums.txt" | grep $PLATFORM | sha256sum --check
+   52  unzip eksctl_$PLATFORM.zip -d $HOME/bin
+   53  rm eksctl_$PLATFORM.zip
+   54  eksctl.exe 
+   55  kubectl
+   56  eksctl delete cluster my-single-node-cluster --region us-east-1
+   57  aws --version
+   58  eksctl version
+   59  kubectl version --client
+   60  aws configure
+   61  eksctl create cluster   --name my-simple-cluster   --region us-east-1   --version 1.32   --nodegroup-name standard-workers   --node-type t3.micro   --nodes 1   --nodes-min 1   --nodes-max 1   --managed
+   62  eksctl get clusters --region us-east-1
+   63  eksctl get cluster --name my-simple-cluster --region us-east-1
+   64  aws eks update-kubeconfig --name my-simple-cluster --region us-east-1
+   65  kubectl config get-contexts
+   66  kubectl get nodes
+   67  kubectl get pods
+   68  kubectl get pods -n kube-system
+   69  kubectl get pods -A
+   70  history 
+   71  kubectl run my1stpod --image=nginx --namespace=app1
+   72  kubectl create ns app1
+   73  kubectl run my1stpod --image=nginx --namespace=app1
+   74  vi pod1.yaml
+   75  kubectl apply -f pod1.yaml 
+   76  kubectl get pods
+   77  kubectl get pods -n app1
+   78  kubectl get pods -n app1
+   79  kubectl get pods
+   80  kubectl logs nginx-pod
+   81  kubectl descibe nginx-pod
+   82  kubectl describe nginx-pod
+   83  kubectl get pods
+   84  kubectl get pod nginx-pod -o yaml
+   85  kubectl get nodes
+   86  kubectl get pods
+   87  eksctl create nodegroup --help  --name my-simple-cluster   --region us-east-1   --version 1.32   --nodegroup-name standard-workers   --node-type t3.micro   --nodes 1   --nodes-min 1   --nodes-max 1   --managed
+   88  eksctl create nodegroup --help
+   89  eksctl create nodegroup --help  -c my-simple-cluster   --region us-east-1   --version 1.32   -n workers   --node-type t3.medium   --nodes 1   --nodes-min 1   --nodes-max 1   --managed
+   90  eksctl create nodegroup  -c my-simple-cluster   --region us-east-1   --version 1.32   -n workers   --node-type t3.medium   --nodes 1   --nodes-min 1   --nodes-max 1   --managed
+   91  eksctl create nodegroup  -c my-simple-cluster   --region us-east-1   -n workers   --node-type t3.medium   --nodes 1   --nodes-min 1   --nodes-max 1   --managed
+   92  clear
+   93  kubectl get pods
+   94  kubectl logs nginx-pod
+   95  kubectl get pod nginx-pod -o yaml
+   96  kubectl create rs --help
+   97  vi rs.yaml
+   98  kubectl apply -f rs.yaml 
+   99  kubectl get pods
+  100  kubectl get pods --show-labels
+  101  kubectl label pod/nginx-pod tier=frontend
+  102  kubectl get pods --show-labels
+  103  kubectl get pods --show-labels
+  104  kubectl get pods --show-labels
+  105  kubectl get pods --show-labels
+  106  kubectl get pods --show-labels
+  107  kubectl get pods --show-labels
+  108  kubectl get replicaset
+  109  kubectl get pods --show-labels
+  110  kubectl label pod/nginx-pod tier=frontend-
+  111  kubectl label pod/nginx-pod tier=frontend -
+  112  kubectl get pods --show-labels
+  113  kubectl delete pod nginx-pod
+  114  kubectl get pods --show-labels
+  115  kubectl get replicaset
+  116  kubectl create deployment --help
+  117  kubectl create deployment nginx-deployments --image=nginx
+  118  kubectl get pods --show-labels
+  119  kubectl scale --help
+  120  kubectl scale deployment/nginx-deployments --replicas=3
+  121  kubectl get pods --show-labels
+  122  kubectl get deployments
+  123  kubectl get replicasets
+  124  history 
+  125  kubectl get deployments
+  126  kubectl get deployment nginx-deployments -o yaml
+  127  kubectl edit deployment/nginx-deployment
+  128  kubectl edit deployment/nginx-deployments
+  129  kubectl set image deployment/nginx-deployments nginx=nginx:1.16.1
+  130  kubectl get deployment nginx-deployments -o yaml
+  131  kubectl get pods
+  132  kubectl rollout status deployment/nginx-deployments
+  133  kubectl rollout history deployment/nginx-deployments
+  134  kubectl set image deployment/nginx-deployments nginx=nginx:1.16.1 --help
+  135  kubectl rollout history deployment/nginx-deployments --revision=1
+  136  kubectl rollout history deployment/nginx-deployments --revision=2
+  137  kubectl expose deployment nginx-deployments --port=80
+  138  kubectl get services
+  139  kubectl get pods
+  140  kubectl exec -it frontend-2gbjt -- bash
+  141  kubectl expose deployment nginx-deployments --port=80 --type=Loadbalancer
+  142  kubectl expose deployment nginx-deployments --port=80 --type=LoadBalancer
+  143  kubectl delete service nginx-deployments
+  144  kubectl expose deployment nginx-deployments --port=80 --type=Loadbalancer
+  145  kubectl expose deployment nginx-deployments --port=80 --type=LoadBalancer
+  146  kubectl get services
+  147  kubectl delete service nginx-deployments
+  148  kubectl expose deployment nginx-deployments --port=80 --type=NodePort
+  149  kubectl get services
+  150  kubectl get nodes
+  151  kubectl delete service nginx-deployments
+  152  kubectl delete deployment nginx-deployments
+  153  kubectl get pods
+  154  kubectl delete replicaset frontend
+  155  kubectl get pods
+  156  kubectl get pods -n app1
+  157  kubectl create service clusterip nginx --tcp=80:8080 -n app1
+  158  kubectl get services
+  159  kubectl get services -n app1
+  160  kubectl describe service nginx -n app1
+  161  kubectl get pods -n app1
+  162  kubectl get pods -n app1 --show-labels
+  163  kubectl label pod/my1stpod app=nginx
+  164  kubectl label pod/my1stpod app=nginx -n app1
+  165  kubectl get pods -n app1 --show-labels
+  166  kubectl describe service nginx -n app1
+  167  kubectl get services -n app1
+  168  kubectl run nginx --image=nginx =n app1
+  169  kubectl run nginx --image=nginx -n app1
+  170  kubectl get pods -n app1 --show-labels
+  171  kubectl label pod/nginx app=nginx -n app1
+  172  kubectl get pods -n app1 --show-labels
+  173  kubectl describe service nginx -n app1
+  174  kubectl describe pod nginx -n app1
+  175  history 
+  176  history > k8s_history.log
