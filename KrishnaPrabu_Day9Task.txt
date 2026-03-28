@@ -1,0 +1,42 @@
+#!/bin/bash
+a=$1
+b=$2
+c=$((a + b))
+
+#1st ifloop
+if (($c>10));then
+echo "$c is gretaer than 10"
+else
+echo "$c is lesser than 10"
+fi
+
+#2nd ifloop
+#
+echo "a is $a"
+echo "b is $b"
+
+if (($a > $b));then
+echo "$a is greater"
+elif (($b > $a));then
+        echo "$b is greater"
+else
+        echo "nothis is greater"
+fi
+
+---------------------------------------------------------------------------------
+
+ubuntu@ip-172-31-74-52:~$ bash -x /tmp/ifloop 6 6
++ a=6
++ b=6
++ c=12
++ (( 12>10 ))
++ echo '12 is gretaer than 10'
+12 is gretaer than 10
++ echo 'a is 6'
+a is 6
++ echo 'b is 6'
+b is 6
++ (( 6 > 6 ))
++ (( 6 > 6 ))
++ echo 'nothis is greater'
+nothis is greater
