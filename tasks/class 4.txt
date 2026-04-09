@@ -1,0 +1,68 @@
+
+
+Process management - ps, top, pid, kill, pidoff, pstree, swapon, free, priority, nice/renice, bg fg
+
+ps - to check all the running/idle/sleeping/zombie process
+ps -ef - short description of all running process
+ps -aux --> more info on processes
+top -> real time process tree view - task manager
+pid- process id
+ppid - parent process id
+
+Jobs - telling cmd to execute a process or a command in the current shell
+
+foreground and background process - 
+to run in background we use & in the last
+to make a job run in foreground --> fg %jobid 
+to make a job run in foreground --> fg %jobid 
+
+to take it to bg again from fg -->
+1. ctrl + z
+2. type bg and press enter
+
+Nice and Renice - 
+nice command is to prioritize the process during execution of command
+
+sudo nice -n 10 bash script.sh
+
+renice is a command to change the prioritize of an existing process
+sudo renice -n 10 -p 124
+
+dd
+dd if=/dev/zero of=/dev/null
+
+archiving - 
+tar
+tar -c -f des.tar src_file
+-x - to extract
+-v - verbose
+
+with archiving , we can combine compression'
+3 mostly used compression commands - gzip, xz, bzip2
+
+gzip -->
+tar -czf dest.tar.gz src_file
+
+sudo - superadmin -
+User and group management - useradd/adduser, skel files, usermod -aG, passwd, id, facl
+by default there is a root user who has all privileges
+by default there is a group called as wheeler and sudo --> they have super admin privilegs same as root
+
+
+to become root with the same shell --> sudo su
+
+to create a user - useradd
+to modify existing user - usermod
+to switch to particular user - su
+to set a password for a user - passwd username
+to add to an existing group - usermod -aG groupname user
+
+skel dir - /etc/skel
+it is a directory to specify all the contents to be copied by default to all the new user home directories
+
+advanced - to lock a user password
+to lock a user account, to disable password, to change the home directory
+
+if you see # in front of a line in config files, it means its commented meaning it is just there and it is not implemented/it is not enabled
+
+one interesting fact - earlier mouse/keyboards were connected using ps/2 ports
